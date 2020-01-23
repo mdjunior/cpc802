@@ -35,3 +35,14 @@ False: 168880
 ```
 
 Serão gerados os arquivos `dataset/goodqueries.json` e `dataset/badqueries.json`. Esses arquivos possuem uma lista de URLs (sem o hostname). Para ter o resultado em JSON ao invés de apenas a linha com a URL, descomente as linhas indicadas no script (189 e 193).
+
+### Testes com sklearn
+
+Umas das primeiras abordagens para o uso de Inteligência Computacional é utilizar classificadores. Como o escopo do problema trabalhado aqui indica que um evento do protocolo pode ser analisado mais de uma vez (pelo classificador e pelo analisador de protocolo), vamos focar em classificadores que podem ser mais performáticos. Dessa forma, vamos trabalhar inicialmente com:
+- Regressão logística
+- SVM
+- Perceptron
+
+Além do uso de classificadores binários, vamos fazer testes com diferentes formas de vetorização das URLs. Dessa forma, vamos trabalhar inicialmente com:
+- TF-IDF em caracteres
+- TF-IDF em palavras de acordo com separadores usados no protocolo HTTP
