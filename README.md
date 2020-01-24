@@ -46,3 +46,9 @@ Umas das primeiras abordagens para o uso de Inteligência Computacional é utili
 Além do uso de classificadores binários, vamos fazer testes com diferentes formas de vetorização das URLs. Dessa forma, vamos trabalhar inicialmente com:
 - TF-IDF em caracteres
 - TF-IDF em palavras de acordo com separadores usados no protocolo HTTP
+
+### Conjunto de dados públicos
+
+Alguns conjuntos de dados públicos foram utilizados durante os testes e se encontram disponíveis para uso também. A seguir um lista com os dados utilizados e sua respectiva origem:
+- dataset/badqueries.txt: https://github.com/hugo-glez/bsidescdmx2019/tree/117e234ae275c7d50568d87b2ef660fcfb056b3b/datasets/Fwaf-ML
+- dataset/goodqueries.txt: https://github.com/hugo-glez/bsidescdmx2019/tree/117e234ae275c7d50568d87b2ef660fcfb056b3b/datasets/Fwaf-ML
