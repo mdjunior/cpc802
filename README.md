@@ -52,3 +52,11 @@ Além do uso de classificadores binários, vamos fazer testes com diferentes for
 Alguns conjuntos de dados públicos foram utilizados durante os testes e se encontram disponíveis para uso também. A seguir um lista com os dados utilizados e sua respectiva origem:
 - dataset/badqueries.txt: https://github.com/hugo-glez/bsidescdmx2019/tree/117e234ae275c7d50568d87b2ef660fcfb056b3b/datasets/Fwaf-ML
 - dataset/goodqueries.txt: https://github.com/hugo-glez/bsidescdmx2019/tree/117e234ae275c7d50568d87b2ef660fcfb056b3b/datasets/Fwaf-ML
+
+### Modelos treinados
+
+Alguns modelos foram treinados durante esse trabalho e se encontram disponibilizados aqui como referências. Esses modelos foram exportados utilizando a biblioteca [joblib](https://joblib.readthedocs.io/en/latest/).
+
+A seguir uma lista com os modelos que se encontram na pasta `models` e a descrição de cada um deles:
+- models/cpc802-20200125-210918.sav: modelo treinado utilizando um dataset privado com Regressão Logística e vetorização TF-IDF em caracteres. Possui acurácia de 0.9953 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9727 no dataset privado.
+- models/cpc802-20200125-210051.sav: modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Regressão Logística e vetorização TF-IDF em caracteres. Possui acurácia de 0.9999 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9010 no dataset privado.
