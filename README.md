@@ -56,6 +56,7 @@ Alguns conjuntos de dados públicos foram utilizados durante os testes e se enco
 ### Modelos treinados
 
 Alguns modelos foram treinados durante esse trabalho e se encontram disponibilizados aqui como referência. Esses modelos foram exportados utilizando a biblioteca [joblib](https://joblib.readthedocs.io/en/latest/).
+Você pode usar o Jupyter Notebook disponível em `models/load_model_from_joblib` para carregar os modelos e testar com seu próprio dataset.
 
 A seguir uma lista com os modelos que se encontram na pasta `models` e a descrição de cada um deles:
 - models/cpc802-20200125-210918.sav (modelo sem vetorizador disponível): modelo treinado utilizando um dataset privado com Regressão Logística e vetorização TF-IDF em caracteres. Possui acurácia de 0.9953 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9727 no dataset privado.
