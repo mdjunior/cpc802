@@ -10,7 +10,7 @@ Duas propostas de trabalho foram realizadas:
 1. Análise de temas em conteúdo não estruturado: dentro de uma amostra de conteúdo não estruturado (comentários, entrevistas), vamos analisar os temas predominantes no seu conteúdo.
 2. Busca por abuso em protocolos da web: construir um sistema para determinar se uma comunicação através de um protocolo pode estar sob abuso ou não. A proposta é minimizar as comunicações que precisam ser inspecionadas por um analisador de protocolo (no caso, um Web Application Firewall).
 
-Devido a ausência de dados para seguir com a primeira proposta, o tema desenvolvido nesse trabalho é o segundo `Busca por abuso em protocolos da web`.
+Devido a ausência de dados para seguir com a primeira proposta, o tema desenvolvido nesse trabalho é o segundo: `Busca por abuso em protocolos da web`.
 
 ### Preparação dos dados
 
@@ -65,3 +65,13 @@ A seguir uma lista com os modelos que se encontram na pasta `models` e a descri�
 - models/cpc802-20200127-221847-word.sav (modelo sem vetorizador disponível): modelo treinado utilizando um dataset privado com Regressão Logística e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`). Possui acurácia de 0.9878 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9729 no dataset privado.
 - models/cpc802-20200128-223107-word.sav (vetorizador `models/cpc802-20200128-223107-word.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Regressão Logística e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9997 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9099 no dataset privado.
 - models/cpc802-20200129-223546-word.sav (vetorizador `models/cpc802-20200129-223546-word.vectorizer`): modelo treinado utilizando um dataset privado com Regressão Logística e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9945 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9728 no dataset privado.
+
+## Referências
+
+A seguir, algumas referências utilizadas durante o trabalho:
+- NARKHEDE, Sarang. Understanding Logistic Regression. Medium. Disponível em: <https://towardsdatascience.com/understanding-logistic-regression-9b02c2aec102>.
+- sklearn.linear_model.LogisticRegression — scikit-learn 0.22.1 documentation. Disponível em: <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html>.
+- GONZALEZ, Hugo. Cloud Machine Learning for Cybersecurity. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/hugo-glez/bsidescdmx2019>.
+- BROWNLEE, Jason. Save and Load Machine Learning Models in Python with scikit-learn - Machine Learning Mastery. Machine Learning Mastery. Disponível em: <https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/>.
+- AHMAD, Faizan. Machine Learning driven Web Application Firewall. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/faizann24/Fwaf-Machine-Learning-driven-Web-Application-Firewall>.
+- AHMAD, Faizan. Using machine learning to detect malicious URLs. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs>.
