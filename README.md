@@ -66,6 +66,10 @@ A seguir uma lista com os modelos que se encontram na pasta `models` e a descri�
 - models/cpc802-20200128-223107-word.sav (vetorizador `models/cpc802-20200128-223107-word.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Regressão Logística e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9997 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9099 no dataset privado.
 - models/cpc802-20200129-223546-word.sav (vetorizador `models/cpc802-20200129-223546-word.vectorizer`): modelo treinado utilizando um dataset privado com Regressão Logística e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9945 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9728 no dataset privado.
 
+A seguir, temos modelos treinados usando SVM e words:
+- models/cpc802-20200203-235821-lsvm-word.sav (vetorizador `models/cpc802-20200203-235821-lsvm-word.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Linear SVM e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9995 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.8092 no dataset privado.
+- models/cpc802-20200203-000837-lsvm-word.sav (vetorizador `models/cpc802-20200203-000837-lsvm-word.vectorizer`): modelo treinado utilizando um dataset privado com Linear SVM e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9894 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9811 no dataset privado.
+
 ## Referências
 
 A seguir, algumas referências utilizadas durante o trabalho:
