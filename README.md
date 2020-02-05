@@ -66,9 +66,26 @@ A seguir uma lista com os modelos que se encontram na pasta `models` e a descri�
 - models/cpc802-20200128-223107-word.sav (vetorizador `models/cpc802-20200128-223107-word.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Regressão Logística e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9997 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9099 no dataset privado.
 - models/cpc802-20200129-223546-word.sav (vetorizador `models/cpc802-20200129-223546-word.vectorizer`): modelo treinado utilizando um dataset privado com Regressão Logística e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9945 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9728 no dataset privado.
 
+A seguir, temos modelos treinados usando SVM e char:
+- models/cpc802-20200204-002901-lsvm-char.sav (vetorizador `models/cpc802-20200204-002901-lsvm-char.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Linear SVM e vetorização TF-IDF em caracteres. Possui acurácia de 0.9999 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.8294 no dataset privado.
+- models/cpc802-20200204-003506-lsvm-char.sav (vetorizador `models/cpc802-20200204-003506-lsvm-char.vectorizer`): modelo treinado utilizando um dataset privado com Linear SVM e vetorização TF-IDF em palavras. Possui acurácia de 0.9900 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9792 no dataset privado.
+
+
 A seguir, temos modelos treinados usando SVM e words:
 - models/cpc802-20200203-235821-lsvm-word.sav (vetorizador `models/cpc802-20200203-235821-lsvm-word.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Linear SVM e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9995 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.8092 no dataset privado.
 - models/cpc802-20200203-000837-lsvm-word.sav (vetorizador `models/cpc802-20200203-000837-lsvm-word.vectorizer`): modelo treinado utilizando um dataset privado com Linear SVM e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9894 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9811 no dataset privado.
+
+### Resultados consolidados
+
+A seguir ilustramos em uma tabela a acurácia dos modelos levando em conta os datasets que foram utilizados na sua geração. O primeiro valor representa a acurácia levando em conta o dataset de treinamento, o segundo valor, leva em conta a acurácia no outro dataset.
+
+|               | Dataset privado | Dataset público |
+|---------------|-----------------|-----------------|
+| LogReg + char |  0.9727/0.9953  |  0.9999/0.9010  |
+| LogReg + word |  0.9728/0.9945  |  0.9997/0.9099  |
+|  LSVM + char  |  0.9792/0.9900  |  0.9999/0.8294  |
+|  LSVM + word  |  0.9811/0.9894  |  0.9995/0.8092  |
+
 
 ## Referências
 
