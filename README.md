@@ -77,6 +77,7 @@ A seguir, temos modelos treinados usando SVM e words:
 
 A seguir, temos modelos treinados usando Perceptron e char:
 - models/cpc802-20200205-005018-perceptron-char.sav (vetorizador `models/cpc802-20200205-005018-perceptron-char.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Perceptron e vetorização TF-IDF em caracteres. Possui acurácia de 0.9999 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.8294 no dataset privado.
+- models/cpc802-20200206-005239-perceptron-char.sav (vetorizador `models/cpc802-20200206-005239-perceptron-char.vectorizer`): modelo treinado utilizando um dataset privado com Perceptron e vetorização TF-IDF em palavras. Possui acurácia de 0.9895 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9830 no dataset privado.
 
 
 ### Resultados consolidados
