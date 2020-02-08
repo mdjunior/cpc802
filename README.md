@@ -103,6 +103,8 @@ A seguir ilustramos em uma tabela a acurácia dos modelos levando em conta os da
 A seguir, algumas referências utilizadas durante o trabalho:
 - NARKHEDE, Sarang. Understanding Logistic Regression. Medium. Disponível em: <https://towardsdatascience.com/understanding-logistic-regression-9b02c2aec102>.
 - sklearn.linear_model.LogisticRegression — scikit-learn 0.22.1 documentation. Disponível em: <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html>.
+- sklearn.svm.LinearSVC — scikit-learn 0.22.1 documentation. Disponível em: <https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html>.
+- sklearn.linear_model.Perceptron — scikit-learn 0.22.1 documentation. Disponível em: <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html>.
 - GONZALEZ, Hugo. Cloud Machine Learning for Cybersecurity. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/hugo-glez/bsidescdmx2019>.
 - BROWNLEE, Jason. Save and Load Machine Learning Models in Python with scikit-learn - Machine Learning Mastery. Machine Learning Mastery. Disponível em: <https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/>.
 - AHMAD, Faizan. Machine Learning driven Web Application Firewall. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/faizann24/Fwaf-Machine-Learning-driven-Web-Application-Firewall>.
