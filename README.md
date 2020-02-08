@@ -77,7 +77,11 @@ A seguir, temos modelos treinados usando SVM e words:
 
 A seguir, temos modelos treinados usando Perceptron e char:
 - models/cpc802-20200205-005018-perceptron-char.sav (vetorizador `models/cpc802-20200205-005018-perceptron-char.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Perceptron e vetorização TF-IDF em caracteres. Possui acurácia de 0.9999 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.8294 no dataset privado.
-- models/cpc802-20200206-005239-perceptron-char.sav (vetorizador `models/cpc802-20200206-005239-perceptron-char.vectorizer`): modelo treinado utilizando um dataset privado com Perceptron e vetorização TF-IDF em palavras. Possui acurácia de 0.9895 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9830 no dataset privado.
+- models/cpc802-20200206-005239-perceptron-char.sav (vetorizador `models/cpc802-20200206-005239-perceptron-char.vectorizer`): modelo treinado utilizando um dataset privado com Perceptron e vetorização TF-IDF em caracteres. Possui acurácia de 0.9895 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9830 no dataset privado.
+
+A seguir, temos modelos treinados usando Perceptron e words:
+- models/cpc802-20200207-010423-perceptron-word.sav (vetorizador `models/cpc802-20200207-010423-perceptron-word.vectorizer`): modelo treinado utilizando o dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) com Perceptron e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9997 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.8803 no dataset privado.
+- models/cpc802-20200207-005857-perceptron-word.sav (vetorizador `models/cpc802-20200207-005857-perceptron-word.vectorizer`): modelo treinado utilizando um dataset privado com Perceptron e vetorização TF-IDF em palavras (separadores `/`,`=`,`.`,`=`,`&`,`?`,` `, `<`, `>`, `(`, `)`, `;`). Possui acurácia de 0.9898 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9899 no dataset privado.
 
 
 ### Resultados consolidados
@@ -91,7 +95,8 @@ A seguir ilustramos em uma tabela a acurácia dos modelos levando em conta os da
 |  LSVM + char  |  0.9792/0.9900  |  0.9999/0.8294  |
 |  LSVM + word  |  0.9811/0.9894  |  0.9995/0.8092  |
 | Perceptron + char |  0.9830/0.9895  |  0.9999/0.8859  |
-| Perceptron + word |    |  /  |
+| Perceptron + word |  0.9899/0.9898  |  0.9997/0.8803  |
+
 
 ## Referências
 
