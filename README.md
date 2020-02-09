@@ -97,6 +97,18 @@ A seguir ilustramos em uma tabela a acurácia dos modelos levando em conta os da
 | Perceptron + char |  0.9830/0.9895  |  0.9999/0.8859  |
 | Perceptron + word |  0.9899/0.9898  |  0.9997/0.8803  |
 
+Podemos chegar em algumas conclusões:
+- O dataset público, embora seja maior, não possui a mesma qualidade nos dados quando comparado com o dataset privado. Esse fator faz com que os modelos que foram treinados com o dataset público tenha um desempenho pior que os modelos treinados com o dataset privado.
+- O uso de `words` vs `char` não apresenta uma melhora significativa entre os modelos.
+- Usando os 3 modelos em conjunto, a acurácia do modelo privado chegou à 0.9911. Investigamos quais elementos usados no treinamento eram os responsáveis pelos 487 erros (no dataset privado) e vimos que o dataset privado continha erros de classificação (ou seja, classificava URLs na categoria errada). Após ajustes no dataset privado, chegamos à 0.9997 de acurácia com apenas 12 erros (usando os modelos treinados com o dataset privado inicial).
+
+|               | Dataset privado |
+|---------------|-----------------|
+| LogReg + word |  0.9940/0.9952  |
+|  LSVM + word  |  0.9972/0.9947  |
+| Perceptron + word |  0.9981/0.9974  |
+| 3 modelos juntos |  0.9997  |
+
 
 ## Referências
 
