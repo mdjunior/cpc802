@@ -109,7 +109,7 @@ Podemos chegar em algumas conclusões:
 | Perceptron + word |  0.9988/0.9974  |
 | 3 modelos juntos |  0.9997  |
 
-- Retreinando com dataset privado revisado a acurácia indivudual dos modelos aumenta, mas a dos 3 modelos juntos diminuiu.
+- Retreinando com dataset privado revisado a acurácia indivudual dos modelos aumenta, mas a dos 3 modelos juntos diminuiu. Os arquivos são `models/cpc802-20200209-030517-perceptron-word.vectorizer`, `models/cpc802-20200209-030517-perceptron-word.sav`, `cpc802-20200209-030517-logreg-word.sav` e `models/cpc802-20200209-030517-lsvm-word.sav`.
 
 |               | Dataset privado |
 |---------------|-----------------|
