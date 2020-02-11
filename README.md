@@ -56,7 +56,7 @@ Alguns conjuntos de dados públicos foram utilizados durante os testes e se enco
 ### Modelos treinados
 
 Alguns modelos foram treinados durante esse trabalho e se encontram disponibilizados aqui como referência. Esses modelos foram exportados utilizando a biblioteca [joblib](https://joblib.readthedocs.io/en/latest/).
-Você pode usar o Jupyter Notebook disponível em `models/load_model_from_joblib` para carregar os modelos e testar com seu próprio dataset.
+Você pode usar o Jupyter Notebook disponível em `models/load_model_from_joblib.ipynb` para carregar os modelos e testar com seu próprio dataset.
 
 A seguir uma lista com os modelos que se encontram na pasta `models` e a descrição de cada um deles:
 - models/cpc802-20200125-210918.sav (modelo sem vetorizador disponível): modelo treinado utilizando um dataset privado com Regressão Logística e vetorização TF-IDF em caracteres. Possui acurácia de 0.9953 no dataset público (`dataset/badqueries.txt` e `dataset/goodqueries.txt`) e 0.9727 no dataset privado.
@@ -100,7 +100,7 @@ A seguir ilustramos em uma tabela a acurácia dos modelos levando em conta os da
 Podemos chegar em algumas conclusões:
 - O dataset público, embora seja maior, não possui a mesma qualidade nos dados quando comparado com o dataset privado. Esse fator faz com que os modelos que foram treinados com o dataset público tenha um desempenho pior que os modelos treinados com o dataset privado.
 - O uso de `words` vs `char` não apresenta uma melhora significativa entre os modelos.
-- Usando os 3 modelos em conjunto, a acurácia do modelo privado chegou à 0.9911. Investigamos quais elementos usados no treinamento eram os responsáveis pelos 487 erros (no dataset privado) e vimos que o dataset privado continha erros de classificação (ou seja, classificava URLs na categoria errada). Após ajustes no dataset privado, chegamos à 0.9997 de acurácia com apenas 12 erros (usando os modelos treinados com o dataset privado inicial). Veja o arquivo 
+- Usando os 3 modelos em conjunto, a acurácia do modelo privado chegou à 0.9911. Investigamos quais elementos usados no treinamento eram os responsáveis pelos 487 erros (no dataset privado) e vimos que o dataset privado continha erros de classificação (ou seja, classificava URLs na categoria errada). Após ajustes no dataset privado, chegamos à 0.9997 de acurácia com apenas 12 erros (usando os modelos treinados com o dataset privado inicial). Veja o arquivo `models\compare_models.ipynb`.
 
 |               | Dataset privado |
 |---------------|-----------------|
