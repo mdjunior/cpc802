@@ -121,6 +121,10 @@ Podemos chegar em algumas conclusões:
 | 3 modelos juntos |  0.9994  |
 
 
+### Aplicação com modelos treinados
+
+Com a finalidade de tornar os resultados encontrados mais práticos, uma aplicação web foi desenvolvida para receber requisições utilizando o protocolo HTTP. Caso algum dos modelos detecte uma condição de requisição maliciosa, a aplicação responderá com o código de estado 403. Caso contrário, a aplicação responderá com o código de estado 200.
+
 ## Referências
 
 A seguir, algumas referências utilizadas durante o trabalho:

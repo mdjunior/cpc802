@@ -6,10 +6,10 @@ from flask import request
 
 import joblib
 
-filenameVectorizer   = '../models/cpc802-20200209-030517-perceptron-word.vectorizer'
-filenameModel_logreg = '../models/cpc802-20200209-030517-logreg-word.sav'
-filenameModel_lsvm   = '../models/cpc802-20200209-030517-lsvm-word.sav'
-filenameModel_percep = '../models/cpc802-20200209-030517-perceptron-word.sav'
+filenameVectorizer   = os.getenv('MODELS_FOLDER','../models/') + 'cpc802-20200209-030517-perceptron-word.vectorizer'
+filenameModel_logreg = os.getenv('MODELS_FOLDER','../models/') + 'cpc802-20200209-030517-logreg-word.sav'
+filenameModel_lsvm   = os.getenv('MODELS_FOLDER','../models/') + 'cpc802-20200209-030517-lsvm-word.sav'
+filenameModel_percep = os.getenv('MODELS_FOLDER','../models/') + 'cpc802-20200209-030517-perceptron-word.sav'
 
 # Função que separa cada URL em uma lista de palavras/tokens, utilizando como separadores: '/', '-', '.'
 #   Ela é necessário mesmo na aplicação Flask.
@@ -51,4 +51,4 @@ def show_subpath(subpath):
     ), status_code
 
 if __name__ == "__main__":
-    app.run(port=os.getenv('PORT',8888))
+    app.run(host='0.0.0.0',port=os.getenv('PORT',8888))
