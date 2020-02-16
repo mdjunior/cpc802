@@ -1,0 +1,20 @@
+name: tsuru
+
+on: [push]
+
+# Environment variables available to all jobs and steps in this workflow
+env:
+  TSURU_TARGET: ${{ secrets.TSURU_TARGET }}
+  TSURU_TOKEN: ${{ secrets.TSURU_TOKEN }}
+  TSURU_APP: ${{ secrets.TSURU_APP }}
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install tsuru-client
+      run: curl -sSL https://github.com/tsuru/tsuru-client/releases/download/1.7.3/tsuru_1.7.3_linux_386.tar.gz | tar xz
+    - name: Make deploy
+      run: ./tsuru app-deploy -a $TSURU_APP app/ models/ -f app/Procfile
