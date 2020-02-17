@@ -125,6 +125,26 @@ Podemos chegar em algumas conclusões:
 
 Com a finalidade de tornar os resultados encontrados mais práticos, uma aplicação web foi desenvolvida para receber requisições utilizando o protocolo HTTP. Caso algum dos modelos detecte uma condição de requisição maliciosa, a aplicação responderá com o código de estado 403. Caso contrário, a aplicação responderá com o código de estado 200.
 
+Veja um exemplo a seguir:
+
+```
+curl -v 'https://ufrj-coppe-cpc802.t.mdjunior.eng.br/test.php?c=select'
+> GET /test.php?c=select HTTP/2
+> Host: ufrj-coppe-cpc802.t.mdjunior.eng.br
+> User-Agent: curl/7.64.1
+> Accept: */*
+>
+* Connection state changed (MAX_CONCURRENT_STREAMS == 128)!
+< HTTP/2 403
+< server: nginx
+< date: Sun, 01 Mar 2020 06:21:52 GMT
+< content-type: application/json
+< content-length: 57
+<
+{"lgs":1,"lsvm":1,"percep":1,"uri":"/test.php?c=select"}
+```
+
+
 ## Referências
 
 A seguir, algumas referências utilizadas durante o trabalho:
