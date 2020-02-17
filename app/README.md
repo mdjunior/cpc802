@@ -17,6 +17,7 @@ Para desenvolver a aplicação nessa pasta, você precisará configurar um ambie
 
 ```
 sudo pip3 install virtualenv
+virtualenv ENV
 source ENV/usr/local/bin/activate
 pip3 install -r requirements.txt
 ```
