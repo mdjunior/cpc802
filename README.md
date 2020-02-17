@@ -149,6 +149,7 @@ curl -v 'https://ufrj-coppe-cpc802.t.mdjunior.eng.br/test.php?c=select'
 
 A seguir, algumas referências utilizadas durante o trabalho:
 - NARKHEDE, Sarang. Understanding Logistic Regression. Medium. Disponível em: <https://towardsdatascience.com/understanding-logistic-regression-9b02c2aec102>.
+- PEDREGOSA, F. et al. Scikit-learn: Machine Learning in Python. Journal of machine learning research: JMLR, v. 12, p. 2825–2830, 2011.
 - sklearn.linear_model.LogisticRegression — scikit-learn 0.22.1 documentation. Disponível em: <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html>.
 - sklearn.svm.LinearSVC — scikit-learn 0.22.1 documentation. Disponível em: <https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html>.
 - sklearn.linear_model.Perceptron — scikit-learn 0.22.1 documentation. Disponível em: <https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Perceptron.html>.
