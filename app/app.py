@@ -36,8 +36,8 @@ def show_subpath(subpath):
 
     # Geramos uma predição quando ao URI.
     lgs_predict = lgs.predict(URI_vector)
-    lsvm_predict = lgs.predict(URI_vector)
-    percep_predict = lgs.predict(URI_vector)
+    lsvm_predict = lsvm.predict(URI_vector)
+    percep_predict = percep.predict(URI_vector)
 
     status_code = 200
     if lgs_predict == 1 or lsvm_predict == 1 or percep_predict == 1:
