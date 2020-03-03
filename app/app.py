@@ -24,9 +24,9 @@ lgs = joblib.load(filenameModel_logreg)
 lsvm = joblib.load(filenameModel_lsvm)
 percep = joblib.load(filenameModel_percep)
 
-app = Flask(__name__)
+api = Flask(__name__)
 
-@app.route('/<path:subpath>')
+@api.route('/<path:subpath>')
 def show_subpath(subpath):
 
     uri = '%s?%s' % (request.path, request.query_string.decode('utf-8'))
@@ -51,4 +51,4 @@ def show_subpath(subpath):
     ), status_code
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=os.getenv('PORT',8888))
+    api.run(host='0.0.0.0',port=os.getenv('PORT',8888))
