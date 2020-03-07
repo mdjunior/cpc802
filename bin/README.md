@@ -46,6 +46,8 @@ Ou apenas:
 0
 ```
 
+O commit 920ce0d16a0c0886cafbe7cd07dc0ef32a7a9e01 mostra as mudanças realizadas no código em Go exportado.
+
 ## Conclusões
 
 A exportação dos modelos ocorreu conforme esperado, mas a incapacidade de exportar a vetorização utilizada é um ponto de melhora. Para alguns testes e exemplos, tivemos que recorrer ao código em Python para gerar o vetor de teste.
