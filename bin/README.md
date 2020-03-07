@@ -82,7 +82,7 @@ ok      _/cpc802/bin/golang  30.553s
 Success: Benchmarks passed.
 ```
 
-Nesse resultado temos que cada elemento no vetor adiciona cerca de 1ns no cálculo da predição. Podemos reparar que o uso de múltiplos cores não influencia o tempo de execução uma vez que o algoritmo é sequencial.
+Nesse resultado temos que cada elemento no vetor adiciona cerca de 1ns no cálculo da predição. Podemos reparar que o uso de múltiplos cores não influencia o tempo de execução uma vez que o algoritmo é sequencial (repare no `-2` ou `-3` ao fim do nome do ).
 
 ## Conclusões
 
