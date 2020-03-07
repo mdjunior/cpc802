@@ -7,12 +7,14 @@ import (
 	"strings"
 )
 
+// LinearSVC is struct with Coefficients for linear SVM
 type LinearSVC struct {
 	coefficients []float64
 	intercepts   float64
 }
 
-func (svc LinearSVC) predict(features []float64) int {
+// Predict calculates predictions with feature vector
+func (svc LinearSVC) Predict(features []float64) int {
 	var prob float64
 	for i := 0; i < len(svc.coefficients); i++ {
 		prob = prob + svc.coefficients[i]*features[i]
@@ -45,7 +47,7 @@ func main() {
 
 	// Prediction:
 	clf := LinearSVC{coefficients, intercepts}
-	estimation := clf.predict(features)
+	estimation := clf.Predict(features)
 	fmt.Printf("%d\n", estimation)
 
 }

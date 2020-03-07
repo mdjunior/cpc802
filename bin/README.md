@@ -1,6 +1,6 @@
 # Modelos exportados
 
-Os seguintes códigos foram gerados (e modificados) a partir da bilioteca [sklearn-porter](https://github.com/nok/sklearn-porter). A finalidade deles é avaliar o custo de implementação da predição de modelos já treinados em outras plataformas que não suportem Python.
+Os seguintes códigos foram gerados (e modificados) a partir da bilioteca [sklearn-porter](https://github.com/nok/sklearn-porter). A finalidade deles é avaliar o custo de implementação da predição de modelos já treinados em outras plataformas que não suportem Python. Cada modelo exportado está em uma pasta com o nome da linguagem de destino.
 
 ## Exportando modelos
 
@@ -12,12 +12,12 @@ Uma vez com o arquivo exportado e com o sklearn-porter instalado, você pode exe
 
 No caso de exportar para Go:
 ```
-porter ../models/cpc802-20200209-030517-lsvm-word.sav --go --pipe >> model.go
+porter ../models/cpc802-20200209-030517-lsvm-word.sav --go --pipe >> golang/model.go
 ```
 
 No caso de exportar para C:
 ```
-porter ../models/cpc802-20200209-030517-lsvm-word.sav --c --pipe >> model.c
+porter ../models/cpc802-20200209-030517-lsvm-word.sav --c --pipe >> cpp/model.c
 ```
 
 ## Adaptando modelos para testes via terminal
@@ -47,6 +47,42 @@ Ou apenas:
 ```
 
 O commit 920ce0d16a0c0886cafbe7cd07dc0ef32a7a9e01 mostra as mudanças realizadas no código em Go exportado.
+
+## Benchmark
+
+Para o código em Go, fizemos alguns benchmarks levando em conta o último modelo treinado com `words`, mas também fizemos um teste variando o tamanho do modelo. O teste `BenchmarkPredictFull` calcula o tempo médio para uma classificação utilizando o modelo completo. Os outros testes, `BenchmarkPredictModelSizeN`, calculam o tempo médio para uma classificação utilizando um modelo de tamanho N.
+
+```
+Running tool: /usr/local/bin/go test -benchmem -cpu 1,2,3,4 -run=^$ -bench .
+
+goos: darwin
+goarch: amd64
+BenchmarkPredictFull                       19228             59154 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictFull-2                     20666             57023 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictFull-3                     20678             56894 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictFull-4                     20947             57601 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize10             122611680                9.57 ns/op            0 B/op          0 allocs/op
+BenchmarkPredictModelSize10-2           125284780                9.59 ns/op            0 B/op          0 allocs/op
+BenchmarkPredictModelSize10-3           124638420                9.57 ns/op            0 B/op          0 allocs/op
+BenchmarkPredictModelSize10-4           122735104                9.65 ns/op            0 B/op          0 allocs/op
+BenchmarkPredictModelSize100            11594964               103 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize100-2          10961134               102 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize100-3          11680146               123 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize100-4          11684485               102 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize1000            1000000              1143 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize1000-2          1000000              1137 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize1000-3          1000000              1153 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize1000-4          1000000              1136 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize10000            101820             11543 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize10000-2          100446             11824 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize10000-3          100381             11889 ns/op               0 B/op          0 allocs/op
+BenchmarkPredictModelSize10000-4           96447             12412 ns/op               0 B/op          0 allocs/op
+PASS
+ok      _/cpc802/bin/golang  30.553s
+Success: Benchmarks passed.
+```
+
+Nesse resultado temos que cada elemento no vetor adiciona cerca de 1ns no cálculo da predição. Podemos reparar que o uso de múltiplos cores não influencia o tempo de execução uma vez que o algoritmo é sequencial.
 
 ## Conclusões
 
