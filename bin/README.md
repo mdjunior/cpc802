@@ -1,6 +1,6 @@
 # Modelos exportados
 
-Os seguintes códigos foram gerados (e modificados) a partir da bilioteca sklearn-porter. A finalidade deles é avaliar o custo de implementação da predição de modelos já treinados em outras plataformas que não suportem Python.
+Os seguintes códigos foram gerados (e modificados) a partir da bilioteca [sklearn-porter](https://github.com/nok/sklearn-porter). A finalidade deles é avaliar o custo de implementação da predição de modelos já treinados em outras plataformas que não suportem Python.
 
 ## Exportando modelos
 
@@ -51,3 +51,9 @@ O commit 920ce0d16a0c0886cafbe7cd07dc0ef32a7a9e01 mostra as mudanças realizadas
 ## Conclusões
 
 A exportação dos modelos ocorreu conforme esperado, mas a incapacidade de exportar a vetorização utilizada é um ponto de melhora. Para alguns testes e exemplos, tivemos que recorrer ao código em Python para gerar o vetor de teste.
+
+# Referências
+
+- MORAWIEC, Darius. sklearn-porter. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/nok/sklearn-porter>.
+- pickle — Python object serialization. Python 2.7.17 documentation. Disponível em: <https://docs.python.org/2/library/pickle.html>.
+- Persistence. joblib 0.14.1.dev0 documentation. Disponível em: <https://joblib.readthedocs.io/en/latest/persistence.html>. Acesso em: 11 mar. 2020.
