@@ -144,6 +144,12 @@ curl -v 'https://ufrj-coppe-cpc802.t.mdjunior.eng.br/test.php?c=select'
 {"lgs":1,"lsvm":1,"percep":1,"uri":"/test.php?c=select"}
 ```
 
+### Implementação prática
+
+Com os resultados obtidos, a utilização do modelo se torna interessante no cenário onde o mesmo é embutido em um servidor web através da utilização de plugins ou módulos. Um ponto de relativa preocupação é que os modelos testados e treinados foram implementados usando Python, enquando os servidores web mais utilizados são em C/C++.
+
+Para tornar possível essa integração, uma ferramenta foi analisada especificamente para o uso do sklearn. Mais detalhes estão disponíveis na pasta `bin`.
+
 
 ## Referências
 
@@ -157,3 +163,4 @@ A seguir, algumas referências utilizadas durante o trabalho:
 - BROWNLEE, Jason. Save and Load Machine Learning Models in Python with scikit-learn - Machine Learning Mastery. Machine Learning Mastery. Disponível em: <https://machinelearningmastery.com/save-load-machine-learning-models-python-scikit-learn/>.
 - AHMAD, Faizan. Machine Learning driven Web Application Firewall. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/faizann24/Fwaf-Machine-Learning-driven-Web-Application-Firewall>.
 - AHMAD, Faizan. Using machine learning to detect malicious URLs. [s.l.]: Github, [s.d.]. Disponível em: <https://github.com/faizann24/Using-machine-learning-to-detect-malicious-URLs>.
+- September 2019 Web Server Survey | Netcraft News. Netcraft News. Disponível em: <https://news.netcraft.com/archives/2019/09/27/september-2019-web-server-survey.html>.
